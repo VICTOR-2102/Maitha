@@ -1,0 +1,18 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Domínio.Entidades
+{
+    public class Conta
+    {
+        public int Id { get; set; }
+        public int ClienteId { get; set; }
+        public virtual Cliente Cliente { get; set; }
+        public string Tipo { get; set; }
+        public int NrConta { get; set; }
+        public decimal  Saldo { get; set; }
+    }
+}
