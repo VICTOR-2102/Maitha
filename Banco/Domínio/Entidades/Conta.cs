@@ -11,6 +11,8 @@ namespace Domínio.Entidades
         public int Id { get; set; }
         public int ClienteId { get; set; }
         public virtual Cliente Cliente { get; set; }
+        public int AgenciaId { get; set; }
+        public virtual Agencia Agencia { get; set; }
         public string Tipo { get; set; }
         public int NrConta { get; set; }
         public decimal  Saldo { get; set; }
