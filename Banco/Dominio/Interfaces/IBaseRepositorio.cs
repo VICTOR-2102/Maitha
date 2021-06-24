@@ -1,0 +1,18 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Domínio.Interfaces
+{
+    public interface IBaseRepositorio<TEntity> : IDisposable where TEntity : class
+    {
+        void Adicionar(TEntity entity);
+        TEntity ObterPorId(int Id);
+        IEnumerable<TEntity> ObterTodos();
+        void Atualizar(TEntity entity);
+        void Remover(TEntity entity);
+
+    }
+}   

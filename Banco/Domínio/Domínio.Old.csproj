@@ -6,11 +6,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectTypeGuids>{416D63FD-0477-49AA-A954-A7C5B95A9B51};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <ProjectGuid>{758E294B-E06D-4967-9EF2-060BC310CD65}</ProjectGuid>
+    <ProjectGuid>{37EE8B57-2CAA-4E71-8DFD-F55D2A71EEF0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Repositorio</RootNamespace>
-    <AssemblyName>Repositorio</AssemblyName>
+    <RootNamespace>Domínio</RootNamespace>
+    <AssemblyName>Domínio</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -114,25 +114,21 @@
     <Reference Include="Microsoft.Analytics.Types" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Contexto\BancoContexto.cs" />
+    <Compile Include="Entidades\Agencia.cs" />
+    <Compile Include="Entidades\Base.cs" />
+    <Compile Include="Entidades\Cliente.cs" />
+    <Compile Include="Entidades\Conta.cs" />
+    <Compile Include="Entidades\Contato.cs" />
+    <Compile Include="Interfaces\IAgenciaRepositorio.cs" />
+    <Compile Include="Interfaces\IBaseRepositorio.cs" />
+    <Compile Include="Interfaces\IClienteRepositorio.cs" />
+    <Compile Include="Interfaces\IContaRepositorio.cs" />
+    <Compile Include="Interfaces\IContatoRepositorio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repositorios\AgenciaRepositorio.cs" />
-    <Compile Include="Repositorios\BaseRepositorio.cs" />
-    <Compile Include="Repositorios\ClienteRepositorio.cs" />
-    <Compile Include="Repositorios\ContaRepositorio.cs" />
-    <Compile Include="Repositorios\ContatoRepositorio.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Domínio\Domínio.csproj">
-      <Project>{37ee8b57-2caa-4e71-8dfd-f55d2a71eef0}</Project>
-      <Name>Domínio</Name>
-    </ProjectReference>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
