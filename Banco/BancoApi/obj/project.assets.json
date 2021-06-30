@@ -1520,6 +1520,32 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "Dominio/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/Dominio.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Dominio.dll": {}
+        }
+      },
+      "Repositorio1/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Dominio": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.7",
+          "Microsoft.EntityFrameworkCore.Relational": "5.0.7",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.7"
+        },
+        "compile": {
+          "bin/placeholder/Repositorio1.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Repositorio1.dll": {}
+        }
       }
     }
   },
@@ -5788,13 +5814,25 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
+    },
+    "Dominio/1.0.0": {
+      "type": "project",
+      "path": "../Dominio/Dominio.csproj",
+      "msbuildProject": "../Dominio/Dominio.csproj"
+    },
+    "Repositorio1/1.0.0": {
+      "type": "project",
+      "path": "../Repositorio1/Repositorio1.csproj",
+      "msbuildProject": "../Repositorio1/Repositorio1.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "Microsoft.EntityFrameworkCore >= 5.0.7",
+      "Microsoft.EntityFrameworkCore.Design >= 5.0.7",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.7",
-      "Microsoft.EntityFrameworkCore.Tools >= 5.0.7"
+      "Microsoft.EntityFrameworkCore.Tools >= 5.0.7",
+      "Repositorio1 >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -5828,7 +5866,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\User\\source\\repos\\Maitha\\Banco\\Repositorio1\\Repositorio1.csproj": {
+              "projectPath": "C:\\Users\\User\\source\\repos\\Maitha\\Banco\\Repositorio1\\Repositorio1.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -5842,6 +5884,12 @@
         "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[5.0.7, )"
+          },
+          "Microsoft.EntityFrameworkCore.Design": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "suppressParent": "All",
             "target": "Package",
             "version": "[5.0.7, )"
           },

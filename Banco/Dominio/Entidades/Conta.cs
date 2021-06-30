@@ -14,6 +14,6 @@ namespace Domínio.Entidades
         public virtual Agencia Agencia { get; set; }
         public string Tipo { get; set; }
         public int NrConta { get; set; }
-        public decimal  Saldo { get; set; }
+        public decimal  Saldos { get; set; }
     }
 }

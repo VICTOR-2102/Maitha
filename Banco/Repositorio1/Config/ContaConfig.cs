@@ -27,7 +27,7 @@ namespace Repositorio.Config
             builder.Property(c => c.NrConta)
               .IsRequired();
 
-            builder.Property(c => c.Saldo)
+            builder.Property(c => c.Saldos)
               .IsRequired();
 
            
