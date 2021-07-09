@@ -1,0 +1,12 @@
+C:\Users\User\source\repos\Maitha\Produto\WebApplication1\Repositorio\bin\Debug\netcoreapp3.1\Repositorio.deps.json
+C:\Users\User\source\repos\Maitha\Produto\WebApplication1\Repositorio\bin\Debug\netcoreapp3.1\Repositorio.dll
+C:\Users\User\source\repos\Maitha\Produto\WebApplication1\Repositorio\bin\Debug\netcoreapp3.1\Repositorio.pdb
+C:\Users\User\source\repos\Maitha\Produto\WebApplication1\Repositorio\bin\Debug\netcoreapp3.1\Dominio.dll
+C:\Users\User\source\repos\Maitha\Produto\WebApplication1\Repositorio\bin\Debug\netcoreapp3.1\Dominio.pdb
+C:\Users\User\source\repos\Maitha\Produto\WebApplication1\Repositorio\obj\Debug\netcoreapp3.1\Repositorio.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\Maitha\Produto\WebApplication1\Repositorio\obj\Debug\netcoreapp3.1\Repositorio.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\Maitha\Produto\WebApplication1\Repositorio\obj\Debug\netcoreapp3.1\Repositorio.AssemblyInfo.cs
+C:\Users\User\source\repos\Maitha\Produto\WebApplication1\Repositorio\obj\Debug\netcoreapp3.1\Repositorio.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\Maitha\Produto\WebApplication1\Repositorio\obj\Debug\netcoreapp3.1\Repositorio.csproj.CopyComplete
+C:\Users\User\source\repos\Maitha\Produto\WebApplication1\Repositorio\obj\Debug\netcoreapp3.1\Repositorio.dll
+C:\Users\User\source\repos\Maitha\Produto\WebApplication1\Repositorio\obj\Debug\netcoreapp3.1\Repositorio.pdb

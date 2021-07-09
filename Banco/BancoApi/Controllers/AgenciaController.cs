@@ -16,7 +16,7 @@ namespace BancoApi.Controllers
     public class AgenciaController : ControllerBase
     {
         private readonly IAgenciaRepositorio _agenciaRepositorio;
-        public AgenciaController(AgenciaRepositorio agenciaRepositorio)
+        public AgenciaController(IAgenciaRepositorio agenciaRepositorio)
         {
             _agenciaRepositorio = agenciaRepositorio;
         }

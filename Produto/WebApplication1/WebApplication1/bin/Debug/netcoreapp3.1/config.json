@@ -1,0 +1,5 @@
+{
+  "ConnectionStrings": {
+    "db_banco": "Server=(LocalDB)\\MSSQLLocalDB;Database=LOJA;Trusted_Connection=True"
+  }
+}

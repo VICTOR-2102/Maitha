@@ -1,4 +1,5 @@
-﻿using Domínio.Entidades;
+﻿using BancoApi.Request;
+using Domínio.Entidades;
 using Domínio.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -15,9 +16,11 @@ namespace BancoApi.Controllers
     public class ClienteController : ControllerBase
     {
         private readonly IClienteRepositorio _clienteRepositorio;
-        public ClienteController(IClienteRepositorio clienteRepositorio)
+        private readonly IContatoRepositorio _contatoRepositorio;
+        public ClienteController(IClienteRepositorio clienteRepositorio, IContatoRepositorio contatoRepositorio)
         {
             _clienteRepositorio = clienteRepositorio;
+            _contatoRepositorio = contatoRepositorio;
         }
         [HttpGet("{id?}")]
         public async Task<IActionResult> Get(int id = 0)
@@ -53,7 +56,7 @@ namespace BancoApi.Controllers
             }
         }
         // PUT api/<ClienteController>/5
-       [ HttpPut("{id}")]
+        [HttpPut("{id}")]
         public async Task<IActionResult> Put(int id, [FromBody] Cliente cliente)
         {
             try
@@ -64,12 +67,12 @@ namespace BancoApi.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest(ex.ToString()); 
+                return BadRequest(ex.ToString());
             }
         }
-      // DELETE api/<ClienteController>/5
+        // DELETE api/<ClienteController>/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete([FromBody]Cliente cliente)
+        public async Task<IActionResult> Delete([FromBody] Cliente cliente)
         {
             try
             {
@@ -81,5 +84,45 @@ namespace BancoApi.Controllers
                 return BadRequest(ex.ToString());
             }
         }
+        [HttpPost("ClientePorDocumento")]
+        public async Task<IActionResult> ClientePorDocumento([FromBody] ClienteRequest cliente)
+        {
+            return Ok(new Cliente());
+        }
+
+        [HttpGet("Contato/ClienteId/{id}")]
+        public async Task<IActionResult> GetContatoClienteId(int id)
+        {
+            try
+            {
+                if (id == 0)
+                    return NotFound("Id do cliente não informado!");
+                else
+                    return Ok(_contatoRepositorio.ObterTodos().Where(contato => contato.ClienteId == id).FirstOrDefault());
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.ToString());
+            }
+        }
+
+
+        [HttpGet("Contato/{id?}")]
+        public async Task<IActionResult> GetContato(int id = 0)
+        {
+            try
+            {
+                if (id != 0)
+                    return Ok(_contatoRepositorio.ObterPorId(id));
+
+                return Ok(_contatoRepositorio.ObterTodos());
+            }
+            catch (Exception ex)
+            {
+
+                return BadRequest(ex.ToString());
+            }
+        }
     }
+
 }

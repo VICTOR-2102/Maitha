@@ -33,10 +33,17 @@ namespace BancoApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-
             services.AddDbContext<BancoContexto>(options =>
                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+
             services.AddScoped<IClienteRepositorio, ClienteRepositorio>();
+            services.AddScoped<IAgenciaRepositorio, AgenciaRepositorio>();
+            services.AddScoped<IContaRepositorio, ContaRepositorio>();
+            services.AddScoped<IContatoRepositorio, ContatoRepositorio>();
+
+
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo
